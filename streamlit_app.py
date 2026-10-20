@@ -26,7 +26,7 @@ def get_gdp_data():
     raw_gdp_df = pd.read_csv(DATA_FILENAME)
 
     MIN_YEAR = 1960
-    MAX_YEAR = 2022
+    MAX_YEAR = 2026
 
     # The data above has columns like:
     # - Country Name
@@ -36,7 +36,7 @@ def get_gdp_data():
     # - GDP for 1961
     # - GDP for 1962
     # - ...
-    # - GDP for 2022
+    # - GDP for 2026
     #
     # ...but I want this instead:
     # - Country Name
@@ -67,7 +67,7 @@ gdp_df = get_gdp_data()
 # :earth_americas: GDP dashboard
 
 Browse GDP data from the [World Bank Open Data](https://data.worldbank.org/) website. As you'll
-notice, the data only goes to 2022 right now, and datapoints for certain years are often missing.
+notice, the data only goes to 2026 right now, and datapoints for certain years are often missing.
 But it's otherwise a great (and did I mention _free_?) source of data.
 '''
 
@@ -92,7 +92,7 @@ if not len(countries):
 selected_countries = st.multiselect(
     'Which countries would you like to view?',
     countries,
-    ['DEU', 'FRA', 'GBR', 'BRA', 'MEX', 'JPN'])
+    ['USD', 'EURO', 'GBP', 'BRA', 'MEX', 'JPN'])
 
 ''
 ''
